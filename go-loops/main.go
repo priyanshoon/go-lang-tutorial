@@ -16,8 +16,15 @@ func main() {
 
     names := []string{"priyanshu", "rounak", "krish", "rohit", "aryan"}
 
-    for i := 0; i < len(names); i++ {
-        fmt.Println(names[i])
+    //for i := 0; i < len(names); i++ {
+    //    fmt.Println(names[i])
+    //}
+
+    for _, value := range names {
+        fmt.Printf("the value is %v\n", value)
+        value = "new string"
     }
+
+    fmt.Println(names)
 
 }
