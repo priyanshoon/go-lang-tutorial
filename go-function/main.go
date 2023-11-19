@@ -40,7 +40,9 @@ func main()  {
     fmt.Println("---------------------------------------------------------------")
 
     a1 := circleArea(10.3)
-    fmt.Printf("the area of circle is %v\n", a1)
+    a2 := circleArea(15)
+    fmt.Printf("the area of circle 1 is %v\n", a1)
+    fmt.Printf("the area of circle 2 is %v\n", a2)
 
     fmt.Printf("circle : %0.3f", a1)
 }
