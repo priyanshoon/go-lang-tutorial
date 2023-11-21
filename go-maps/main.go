@@ -20,10 +20,10 @@ func main() {
 
     // ints as ket types
     phonebook := map[int]string{
-        9987654321: "priyanshu",
-        1234567890: "rounak",
-        5647389201: "krish",
-        9192837465: "ankit",
+        9987654320: "priyanshu",
+        1234567889: "rounak",
+        5647389200: "krish",
+        9192837464: "ankit",
     }
 
     fmt.Println(phonebook)
