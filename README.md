@@ -1,0 +1,3 @@
+# go lang tutorial
+
+my personal guide to go-lang hui hui hui...
