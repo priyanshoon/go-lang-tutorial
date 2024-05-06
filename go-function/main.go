@@ -19,6 +19,11 @@ func cycleNames(n []string, f func(string))  {
     }
 }
 
+// example testing
+func heroCycle() (int, int) {
+    return 0, 3
+}
+
 func circleArea(r float64) float64 {
     return math.Pi * r * r
 }
