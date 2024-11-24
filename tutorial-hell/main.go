@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 type Shape interface {
 	Area() float64
@@ -20,6 +23,20 @@ type person struct {
 	age   int
 }
 
+// square root of 2 should be 1.4... something
+func Sqrt(x float64) float64 {
+	z := float64(1)
+	// for i := 1; i <= int(x); i++ {
+	// 	if i*i == int(x) {
+	// 		z = float64(i)
+	// 	}
+	// }
+	for i := 1; i <= 10; i++ {
+		z = z - (z*z-x)/(2*z)
+	}
+	return z
+}
+
 func concat(s1 string, s2 string) string {
 	return s1 + s2
 }
@@ -30,7 +47,7 @@ func concatInDiffWay(s1, s2 string) string {
 
 // function can have multipel return value
 func getName() (string, string) {
-	return "Priyanshu", "Yagini"
+	return "Priyanshu", "Prasad"
 }
 
 func main() {
@@ -106,4 +123,25 @@ func main() {
 
 	i := 42
 	fmt.Println(&i)
+
+	fmt.Println("------------------ Root Problem ---------------------------")
+
+	fmt.Println(Sqrt(4))
+	fmt.Println(Sqrt(2))
+	fmt.Println(Sqrt(169))
+
+	fmt.Println("----------------- Switch Statement -------------------------")
+
+	fmt.Println("When's staturday?")
+	today := time.Now().Weekday()
+	switch time.Saturday {
+	case today + 0:
+		fmt.Println("Today")
+	case today + 1:
+		fmt.Println("2morrow")
+	case today + 2:
+		fmt.Println("In 2 days")
+	default:
+		fmt.Println("Too far away")
+	}
 }
